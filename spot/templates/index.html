@@ -8,11 +8,13 @@
                     <tr>
                         <th>id</th>
                         <th>title</th>
+                        <th>image</th>
                         <th>More Details</th>
+                        <th>link</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for i in data %}
+                    {% for i in datas.products %}
                         <tr>
                             <td>
                                 {{i.id}}
@@ -21,7 +23,13 @@
                                 {{i.title}}
                             </td>
                             <td>
-                                {{i.MoreDetails}}
+                               <img src="{{i.thumbnail}}" alt="">
+                            </td>
+                            <td>
+                                {{i.link}}
+                            </td>
+                            <td>
+                                <a href="% url %">click here</a>
                             </td>
                         </tr>
                     {% endfor %}
